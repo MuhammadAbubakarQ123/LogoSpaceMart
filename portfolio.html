@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio – Digital Services Agency</title>
+
+  <link href="assets/img/icon.png" rel="icon">
+  <link href="assets/img/icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    /* HERO */
+    .portfolio-hero {
+      margin-top: 120px;
+      padding: 130px 0 120px;
+      background: linear-gradient(135deg, #1a1a1a, #111);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-hero::after {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(255,42,42,0.2), transparent 60%);
+      top: -120px;
+      right: -120px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(255,42,42,0.15);
+      color: #ff2a2a;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .portfolio-hero h1 {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-hero h1 span {
+      color: #ff2a2a;
+    }
+
+    .portfolio-hero p {
+      font-size: 18px;
+      max-width: 780px;
+      margin: 20px auto 0;
+      opacity: 0.85;
+    }
+
+    .hero-btn {
+      margin-top: 35px;
+      padding: 14px 38px;
+      background: #ff2a2a;
+      color: #fff;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .hero-btn:hover {
+      background: #e82020;
+      transform: translateY(-2px);
+    }
+
+    /* PORTFOLIO GRID */
+    .portfolio-section {
+      padding: 100px 0;
+    }
+
+    .portfolio-section h2 {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s, filter 0.3s;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+      filter: brightness(0.8);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-overlay h5 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-overlay p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* STATS */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 80px;
+    }
+
+    .stat-item {
+      background: #111;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 800;
+      color: #ff2a2a;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      opacity: 0.7;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="portfolio-page">
+
+  <!-- ================= HEADER ================= -->
+  <header id="header" class="header fixed-top">
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="hdicon bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#!" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#!" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#!" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#!" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="branding d-flex align-items-center" style="background-color: #121212;">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/1.png" alt="Logo">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="portfolio-hero">
+    <div class="container">
+      <span class="hero-badge">Our Work</span>
+      <h1 style="color: white;">Explore <span>Our Portfolio</span><br>Crafted with Creativity</h1>
+      <p>
+        See how we transform ideas into premium digital solutions that deliver results.
+      </p>
+      <a href="contact.html" class="hero-btn">Start Your Project</a>
+    </div>
+  </section>
+
+
+  
+  <section class="simple-portfolio">
+  <div class="container">
+    <div class="row">
+
+      <!-- LEFT IMAGES -->
+      <div class="col-lg-8">
+        <div class="simple-portfolio-grid">
+
+          <a href="assets/img/2d3d.jpeg" class="simple-portfolio-item glightbox">
+            <img src="assets/img/2d3d.jpeg" alt="">
+            <div class="simple-portfolio-overlay">
+              <div>
+                <h5>Brand Identity</h5>
+                <p>Creative branding solution</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="assets/img/ecommerce.jpeg" class="simple-portfolio-item glightbox">
+            <img src="assets/img/ecommerce.jpeg" alt="">
+            <div class="simple-portfolio-overlay">
+              <div>
+                <h5>Web Design</h5>
+                <p>Modern UI experience</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="assets/img/ebook.jpeg" class="simple-portfolio-item glightbox">
+            <img src="assets/img/ebook.jpeg" alt="">
+            <div class="simple-portfolio-overlay">
+              <div>
+                <h5>Mobile App</h5>
+                <p>Clean & intuitive</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="assets/img/ecom.jpeg" class="simple-portfolio-item glightbox">
+            <img src="assets/img/ecom.jpeg" alt="">
+            <div class="simple-portfolio-overlay">
+              <div>
+                <h5>E-commerce</h5>
+                <p>High converting store</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="assets/img/bookcover.jpeg" class="simple-portfolio-item glightbox">
+            <img src="assets/img/bookcover.jpeg" alt="">
+            <div class="simple-portfolio-overlay">
+              <div>
+                <h5>Landing Page</h5>
+                <p>Sales focused layout</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="assets/img/stationary.jpeg" class="simple-portfolio-item glightbox">
+            <img src="assets/img/stationary.jpeg" alt="">
+            <div class="simple-portfolio-overlay">
+              <div>
+                <h5>Logo Design</h5>
+                <p>Premium brand mark</p>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col-lg-4 portfolio-side">
+        <h3>Our Work Speaks Itself</h3>
+        <p>
+          We craft premium digital experiences that help brands grow, convert
+          and stand out in competitive markets.
+        </p>
+
+        <ul>
+          <li><i class="bi bi-check-circle-fill"></i> Branding & Identity</li>
+          <li><i class="bi bi-check-circle-fill"></i> Website Design</li>
+          <li><i class="bi bi-check-circle-fill"></i> Mobile App UI</li>
+          <li><i class="bi bi-check-circle-fill"></i> E-commerce Solutions</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
+
+
+
+  
+
+  <!-- ================= PORTFOLIO ================= -->
+  <section class="portfolio-section">
+    <div class="container">
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item" data-aos="fade-up">
+          <img src="assets/img/portfolio/project1.jpg" alt="">
+          <div class="portfolio-overlay">
+            <div>
+              <h5>Brand Identity</h5>
+              <p>Complete branding for a modern startup.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/img/portfolio/project2.jpg" alt="">
+          <div class="portfolio-overlay">
+            <div>
+              <h5>Web Design</h5>
+              <p>Responsive and sleek website for a client.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/img/portfolio/project3.jpg" alt="">
+          <div class="portfolio-overlay">
+            <div>
+              <h5>Mobile App</h5>
+              <p>User-friendly mobile app with modern UI/UX.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/portfolio/project4.jpg" alt="">
+          <div class="portfolio-overlay">
+            <div>
+              <h5>E-commerce Platform</h5>
+              <p>High-performing online store for retail business.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">250+</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">120+</div>
+          <div class="stat-label">Satisfied Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">6+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="footer" class="footer-16 footer position-relative">
+
+  <div class="footer-glow"></div>
+
+  <div class="container">
+    <div class="footer-main" data-aos="fade-up" data-aos-delay="100">
+      <div class="row align-items-start">
+
+        <!-- Left side: Brand & Contact -->
+        <div class="col-lg-5 mb-5 mb-lg-0">
+          <div class="brand-section">
+            <a href="index.html" class="logo d-flex align-items-center mb-4">
+              <img src="assets/img/footer.png" alt="Logo">
+            </a>
+
+            <p class="brand-description" style="color: white;">
+              We craft premium digital experiences with modern design, clean code
+              and powerful branding that elevates your business.
+            </p>
+
+            <div class="contact-info mt-4">
+              <div class="contact-item" style="color: white;">
+                <i class="bi bi-geo-alt"></i>
+                <span>123 Creative Boulevard, NY 10012</span>
+              </div>
+              <div class="contact-item" style="color: white;">
+                <i class="bi bi-telephone"></i>
+                <span>+1 (832) 226-9775</span>
+              </div>
+              <div class="contact-item" style="color: white;">
+                <i class="bi bi-envelope"></i>
+                <span>kristopherjones@logospacemart.com</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right side: Pages + Social -->
+        <div class="col-lg-7">
+          <div class="footer-nav-wrapper">
+            <div class="row gy-4">
+
+              <!-- Pages Links -->
+              <div class="col-6 col-lg-6">
+                <div class="nav-column">
+                  <h6 style="color: white;">Pages</h6>
+                  <nav class="footer-nav d-flex flex-column">
+                    <a href="index.html" style="color: white; margin-bottom: 6px;">Home</a>
+                    <a href="about.html" style="color: white; margin-bottom: 6px;">About Us</a>
+                    <a href="services.html" style="color: white; margin-bottom: 6px;">Services</a>
+                    <a href="portfolio.html" style="color: white; margin-bottom: 6px;">Portfolio</a>
+                    <a href="contact.html" style="color: white; margin-bottom: 6px;">Contact</a>
+                  </nav>
+                </div>
+              </div>
+
+              <!-- Social Media + WhatsApp -->
+              <div class="col-6 col-lg-6">
+                <div class="nav-column">
+                  <h6 style="color: white;">Connect With Us</h6>
+                  <nav class="footer-nav d-flex flex-column">
+                    <a href="https://wa.me/18322269775?text=I%20want%20to%20know%20more%20about%20your%20services" target="_blank" style="color: white; margin-bottom: 6px;">
+                      <i class="bi bi-whatsapp" style="color:#25D366; margin-right:5px;"></i> WhatsApp
+                    </a>
+                    <a href="#" target="_blank" style="color: white; margin-bottom: 6px;">
+                      <i class="bi bi-facebook" style="color:#1877F2; margin-right:5px;"></i> Facebook
+                    </a>
+                    <a href="#" target="_blank" style="color: white; margin-bottom: 6px;">
+                      <i class="bi bi-twitter" style="color:#1DA1F2; margin-right:5px;"></i> Twitter
+                    </a>
+                    <a href="#" target="_blank" style="color: white; margin-bottom: 6px;">
+                      <i class="bi bi-linkedin" style="color:#0A66C2; margin-right:5px;"></i> LinkedIn
+                    </a>
+                  </nav>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+
+        <div class="col-lg-6 text-center text-lg-start">
+          <p class="copyright">
+            © 2026 <span>Logo Space Market</span>. All Rights Reserved.
+          </p>
+        </div>
+
+        <div class="col-lg-6 text-center text-lg-end">
+          <div class="legal-links d-flex justify-content-center justify-content-lg-end gap-3">
+            <a href="#" style="color: white;">Privacy</a>
+            <a href="#" style="color: white;">Terms</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- JS -->
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
