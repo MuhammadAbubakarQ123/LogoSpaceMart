@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services - Clinic Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="img/icon.png" rel="icon">
+  <link href="img/icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
+
+  
+</head>
+
+<style>
+  /* HERO */
+.services-hero{
+background:radial-gradient(circle at top,#1b1b1b,#000);
+padding:140px 0 100px;
+text-align:center
+}
+.services-hero h1{
+font-size:52px;
+font-weight:800
+}
+.services-hero h1 span{color:#ff2b2b}
+.services-hero p{
+color:#bbb;
+max-width:750px;
+margin:15px auto 0
+}
+</style>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const whatsappNumber = "18322269775";
+
+  // 🔹 DETAILS BUTTON
+  document.querySelectorAll(".btn-details").forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      let serviceName = this.getAttribute("data-service");
+      if (!serviceName) {
+        serviceName = this.closest(".service-card-exact")
+                          .querySelector("h3").innerText;
+      }
+
+      const message = `Hello 👋
+I would like to know *more details* about your *${serviceName}* service.
+
+Please share complete information.
+Thanks!`;
+
+      const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
+    });
+  });
+
+
+  // 🔹 GET SERVICE BUTTON
+  document.querySelectorAll(".btn-service").forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      let serviceName = this.getAttribute("data-service");
+      if (!serviceName) {
+        serviceName = this.closest(".service-card-exact")
+                          .querySelector("h3").innerText;
+      }
+
+      const message = `Hello 👋
+I am interested in your *${serviceName}* service.
+
+Please share pricing & next steps.
+Thanks!`;
+
+      const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
+    });
+  });
+
+});
+</script>
+
+
+
+<body class="services-page">
+
+   <header id="header" class="header fixed-top">
+    
+
+    <div class="branding d-flex align-items-center" style="background-color: #121212;">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="img/1.png" alt="Logo">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul >
+              <li><a href="index.html"  style="font-size: 17px;">Home</a></li>
+              <li><a href="about.html"  style="font-size: 17px;">About</a></li>
+              <li><a href="services.html" class="active" style="font-size: 17px;">Services</a></li>
+            <li><a href="privacy.html" style="font-size: 17px;">Privacy Policy</a></li>
+              <li><a href="contact.html" style="font-size: 17px;">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+      </div>
+    </div>
+   </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <!-- HERO -->
+      <section class="services-hero">
+          <div class="container">
+            <h1 style="color: white;">Our <span> Services</span></h1>
+            <p>Design, development & marketing solutions crafted for brands that want premium results.</p>
+          </div>
+      </section>
+      <section class="mt-5">
+
+
+
+    <!-- ================= SERVICES SECTION ================= -->
+<section id="services" class="services section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <!-- 1 Graphic Designing -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-palette"></i></div>
+    <h3>Graphic Designing</h3>
+    <p>Creative branding & professional designs.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Graphic Designing">Details</a>
+      <a href="#" class="btn-service" data-service="Graphic Designing">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 2 Flyer Designing -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-file-earmark-image"></i></div>
+    <h3>Flyer Designing</h3>
+    <p>Attractive flyers for promotions.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Flyer Designing">Details</a>
+      <a href="#" class="btn-service" data-service="Flyer Designing">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 3 Book Cover -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-book"></i></div>
+    <h3>Book Cover Design</h3>
+    <p>Professional book & ebook covers.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Book Cover Design">Details</a>
+      <a href="#" class="btn-service" data-service="Book Cover Design">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 4 Letter Head -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-file-earmark-text"></i></div>
+    <h3>Letterhead Design</h3>
+    <p>Official & branded letterheads.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Letterhead Design">Details</a>
+      <a href="#" class="btn-service" data-service="Letterhead Design">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 5 Banner -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-aspect-ratio"></i></div>
+    <h3>Banner Designing</h3>
+    <p>Indoor & outdoor banner designs.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Banner Designing">Details</a>
+      <a href="#" class="btn-service" data-service="Banner Designing">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 6 T-Shirt -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-person-badge"></i></div>
+    <h3>T-Shirt Designing</h3>
+    <p>Custom apparel & merch designs.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="T-Shirt Designing">Details</a>
+      <a href="#" class="btn-service" data-service="T-Shirt Designing">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 7 Business Cards -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-credit-card"></i></div>
+    <h3>Business Cards</h3>
+    <p>Premium visiting card designs.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Business Cards">Details</a>
+      <a href="#" class="btn-service" data-service="Business Cards">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 8 Brochure -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-journal"></i></div>
+    <h3>Brochure Design</h3>
+    <p>Custom brochures & catalogs.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Brochure Design">Details</a>
+      <a href="#" class="btn-service" data-service="Brochure Design">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 9 Custom Website -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-laptop"></i></div>
+    <h3>Custom Website</h3>
+    <p>Modern & responsive websites.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Custom Website">Details</a>
+      <a href="#" class="btn-service" data-service="Custom Website">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 10 E-Commerce -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-cart"></i></div>
+    <h3>E-Commerce Website</h3>
+    <p>Online stores with payments.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="E-Commerce Website">Details</a>
+      <a href="#" class="btn-service" data-service="E-Commerce Website">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 11 App Development -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-phone"></i></div>
+    <h3>App Development</h3>
+    <p>Android & iOS applications.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="App Development">Details</a>
+      <a href="#" class="btn-service" data-service="App Development">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 12 E-Book Writing -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-pencil-square"></i></div>
+    <h3>E-Book Writing</h3>
+    <p>Professional ebook writing.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="E-Book Writing">Details</a>
+      <a href="#" class="btn-service" data-service="E-Book Writing">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 13 Lifetime Websites -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-infinity"></i></div>
+    <h3>Lifetime Websites</h3>
+    <p>One-time cost lifetime websites.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Lifetime Websites">Details</a>
+      <a href="#" class="btn-service" data-service="Lifetime Websites">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 14 Print Marketing -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-printer"></i></div>
+    <h3>Print Marketing</h3>
+    <p>Complete print branding solutions.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Print Marketing">Details</a>
+      <a href="#" class="btn-service" data-service="Print Marketing">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 15 Posters & Stickers -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-stickies"></i></div>
+    <h3>Posters & Stickers</h3>
+    <p>Creative posters & labels.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Posters & Stickers">Details</a>
+      <a href="#" class="btn-service" data-service="Posters & Stickers">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 16 Packaging -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-box"></i></div>
+    <h3>Packaging Design</h3>
+    <p>Branded packaging solutions.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Packaging Design">Details</a>
+      <a href="#" class="btn-service" data-service="Packaging Design">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 17 Wedding Invitations -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-heart"></i></div>
+    <h3>Wedding Invitations</h3>
+    <p>Custom wedding & event cards.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Wedding Invitations">Details</a>
+      <a href="#" class="btn-service" data-service="Wedding Invitations">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 18 Full Graphic Services -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-brush"></i></div>
+    <h3>Full Graphic Services</h3>
+    <p>All-in-one design solutions.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Full Graphic Services">Details</a>
+      <a href="#" class="btn-service" data-service="Full Graphic Services">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 19 Animation -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-play-btn"></i></div>
+    <h3>2D / 3D Animation</h3>
+    <p>Animated videos & visuals.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="2D / 3D Animation">Details</a>
+      <a href="#" class="btn-service" data-service="2D / 3D Animation">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 20 Social Media Setup -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-instagram"></i></div>
+    <h3>Social Media Setup</h3>
+    <p>Complete social media profiles.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Social Media Setup">Details</a>
+      <a href="#" class="btn-service" data-service="Social Media Setup">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 21 SMM -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-megaphone"></i></div>
+    <h3>Social Media Marketing</h3>
+    <p>Paid & organic growth campaigns.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Social Media Marketing">Details</a>
+      <a href="#" class="btn-service" data-service="Social Media Marketing">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 22 SEO -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-graph-up"></i></div>
+    <h3>SEO</h3>
+    <p>Google ranking & traffic boost.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="SEO">Details</a>
+      <a href="#" class="btn-service" data-service="SEO">Get Service</a>
+    </div>
+  </div>
+</div>
+
+<!-- 23 Google API -->
+<div class="col-lg-4 col-md-6">
+  <div class="service-card-exact">
+    <div class="service-icon-circle"><i class="bi bi-code-slash"></i></div>
+    <h3>Google API & Tools</h3>
+    <p>Custom APIs & integrations.</p>
+    <div class="service-actions">
+      <a href="#" class="btn-details" data-service="Google API & Tools">Details</a>
+      <a href="#" class="btn-service" data-service="Google API & Tools">Get Service</a>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES CARD CSS ================= -->
+<style>
+.service-card-exact{
+  background: radial-gradient(circle at top,#141414,#000);
+  border-radius:22px;
+  padding:45px 35px;
+  text-align:center;
+  height:100%;
+  box-shadow:0 25px 60px rgba(255,0,0,.25);
+  transition:.4s;
+}
+.service-card-exact:hover{
+  transform:translateY(-10px);
+}
+
+.service-icon-circle{
+  width:75px;
+  height:75px;
+  margin:0 auto 25px;
+  border-radius:50%;
+  background:rgba(255,0,0,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.service-icon-circle i{
+  font-size:32px;
+  color:#ff2b2b;
+}
+
+.service-card-exact h3{
+  color:#fff;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.service-card-exact p{
+  color:#cfcfcf;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.service-meta{
+  margin:25px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.price{
+  color:#ff2b2b;
+  font-weight:600;
+}
+.badge-premium{
+  background:#ff2b2b;
+  color:#000;
+  padding:4px 14px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.service-actions{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+}
+
+.btn-details{
+  border:1px solid #ff2b2b;
+  color:#ff2b2b;
+  padding:12px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn-details:hover{
+  background:#ff2b2b;
+  color:#000;
+}
+
+.btn-service{
+  background:#ff2b2b;
+  color:#000;
+  padding:12px 30px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+}
+.btn-service:hover{
+  background:#ff4444;
+}
+</style>
+
+<section class="mt-5">
+
+<!-- ================= TRUST / STATS SECTION ================= -->
+<section class="services-stats">
+  <div class="container">
+    <div class="row text-center gy-4">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-box">
+          <h2>250+</h2>
+          <p>Projects Completed</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-box">
+          <h2>120+</h2>
+          <p>Happy Clients</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-box">
+          <h2>7+</h2>
+          <p>Years Experience</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-box">
+          <h2>24/7</h2>
+          <p>Support Available</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.services-stats{
+  background:#000;
+  padding:90px 0;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+.stat-box{
+  padding:40px 20px;
+  background:linear-gradient(145deg,#0e0e0e,#000);
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(255,0,0,.25);
+}
+.stat-box h2{
+  font-size:46px;
+  font-weight:800;
+  color:#ff2b2b;
+}
+.stat-box p{
+  color:#bbb;
+  margin-top:10px;
+  font-size:15px;
+}
+</style>
+
+
+<!-- ================= PROCESS SECTION ================= -->
+<section class="process-section">
+  <div class="container">
+    <div class="section-title text-center mb-5">
+      <h2 style="color:white;">How We <span style="color:#ff2b2b;">Work</span></h2>
+      <p style="color:#aaa;">A transparent & proven workflow for premium results</p>
+    </div>
+
+    <div class="row gy-4">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="process-card">
+          <span>01</span>
+          <h4>Discovery</h4>
+          <p>Understanding your goals & business vision.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="process-card">
+          <span>02</span>
+          <h4>Design</h4>
+          <p>Crafting modern & conversion-focused designs.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="process-card">
+          <span>03</span>
+          <h4>Development</h4>
+          <p>Clean, scalable & performance-driven build.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="process-card">
+          <span>04</span>
+          <h4>Launch</h4>
+          <p>Testing, deployment & ongoing support.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.process-section{
+  background:radial-gradient(circle at top,#111,#000);
+  padding:100px 0;
+}
+.process-card{
+  background:#0b0b0b;
+  border-radius:22px;
+  padding:45px 30px;
+  height:100%;
+  text-align:center;
+  transition:.4s;
+}
+.process-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 60px rgba(255,0,0,.35);
+}
+.process-card span{
+  display:inline-block;
+  font-size:32px;
+  font-weight:800;
+  color:#ff2b2b;
+  margin-bottom:15px;
+}
+.process-card h4{
+  color:#fff;
+  font-weight:700;
+}
+.process-card p{
+  color:#bbb;
+  font-size:15px;
+  margin-top:10px;
+}
+</style>
+
+
+<!-- ================= CTA SECTION ================= -->
+<section class="services-cta">
+  <div class="container text-center">
+    <h2>Ready to Build Something <span>Powerful?</span></h2>
+    <p>Let’s turn your idea into a premium digital product.</p>
+    <a href="contact.html" class="cta-btn">Start Your Project</a>
+  </div>
+</section>
+
+<style>
+.services-cta{
+  background:linear-gradient(135deg,#ff2b2b,#9b0000);
+  padding:100px 0;
+}
+.services-cta h2{
+  color:#000;
+  font-size:44px;
+  font-weight:900;
+}
+.services-cta h2 span{
+  color:#fff;
+}
+.services-cta p{
+  color:#000;
+  font-size:18px;
+  margin:15px 0 35px;
+}
+.cta-btn{
+  background:#000;
+  color:#fff;
+  padding:16px 40px;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none;
+}
+.cta-btn:hover{
+  background:#111;
+}
+</style>
+
+
+
+  </main>
+
+<footer class="main-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- LEFT SIDE (LOGO + COMPANY + SOCIAL) -->
+      <div class="footer-col">
+
+        <!-- LOGO -->
+        <img src="img/footer.png" class="footer-logo" alt="logo">
+
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+
+        <h4 class="mt">Follow Us</h4>
+        <div class="socials">
+          <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="wa"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Other Links -->
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Categories</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Get a design -->
+      <div class="footer-col">
+        <h4>Get a design</h4>
+        <ul>
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Flyer Design</a></li>
+          <li><a href="#">Custom Animated Logo</a></li>
+          <li><a href="#">T-shirt Design</a></li>
+          <li><a href="#">Letterhead Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p><strong>Call:</strong> +1 (832) 226-9775</p>
+        <p>
+          <strong>Mail Address</strong><br>
+          11611 W Airport<br>
+          blvd 77477
+        </p>
+        <p>
+          <strong>Main Address</strong><br>
+          11611 W Airport<br>
+          blvd 77477
+        </p>
+      </div>
+
+    </div>
+
+    <!-- bottom -->
+    <div class="footer-bottom">
+     Powered by Logo-Space © 2024. All Rights Reserved.
+    </div>
+
+  </div>
+</footer>
+
+<style>
+/* ========= SAME OLD CSS (UNCHANGED) ========= */
+
+.main-footer{
+  background:#000;
+  color:#fff;
+  padding:90px 0 40px;
+  font-family:Arial, sans-serif;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:70px;
+}
+
+.footer-logo{
+  width:160px;
+  margin-bottom:25px;
+}
+
+.main-footer h4{
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:18px;
+  color:#fff;
+  text-align:left;
+}
+
+.main-footer a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  opacity:.85;
+}
+
+.main-footer a:hover{
+  opacity:1;
+}
+
+.main-footer ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.main-footer ul li{
+  margin-bottom:10px;
+}
+
+.main-footer p{
+  font-size:14px;
+  line-height:1.7;
+  color:#fff;
+  opacity:.9;
+}
+
+.main-footer strong{
+  font-weight:700;
+  color:#fff;
+}
+
+/* ========= UPDATED SOCIAL COLORS ONLY ========= */
+
+.socials{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+
+.socials a{
+  width:38px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+  font-size:15px;
+  transition:.3s;
+}
+
+/* brand colors */
+.socials .fb{ background:#1877F2; }
+.socials .tw{ background:#1DA1F2; }
+.socials .wa{ background:#25D366; }
+
+.socials .ig{
+  background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+}
+
+/* hover effect */
+.socials a:hover{
+  transform:translateY(-3px) scale(1.08);
+}
+
+/* ========= REST SAME ========= */
+
+.mt{
+  margin-top:30px;
+}
+
+.footer-bottom{
+  border-top:1px solid #222;
+  margin-top:60px;
+  padding-top:20px;
+  font-size:13px;
+  color:#fff;
+  opacity:.7;
+  text-align:center;
+}
+
+/* responsive */
+@media(max-width:992px){
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+}
+
+@media(max-width:576px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .footer-col{
+    text-align:center;
+  }
+
+  .footer-logo{
+    margin:0 auto 20px;
+  }
+
+  .socials{
+    justify-content:center;
+  }
+
+  .main-footer h4{
+    text-align:center;
+  }
+}
+</style>
+
+  <!-- Scroll Top -->
+  <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

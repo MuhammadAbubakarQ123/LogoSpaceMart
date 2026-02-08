@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact - Clinic Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+ <link href="img/icon.png" rel="icon">
+  <link href="img/icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<style>
+/* ================= PREMIUM CONTACT ================= */
+
+.premium-contact{
+  background: radial-gradient(circle at top, #111, #000);
+  padding:120px 0;
+}
+
+/* Left Info Panel */
+.contact-info-wrapper{
+  background: linear-gradient(145deg, #0e0e0e, #000);
+  border-radius:28px;
+  padding:50px 40px;
+  box-shadow:0 30px 80px rgba(255,0,0,.25);
+}
+
+.contact-info-item{
+  display:flex;
+  gap:18px;
+  margin-bottom:35px;
+}
+
+.info-icon{
+  width:55px;
+  height:55px;
+  background:#ff2b2b;
+  color:#000;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  flex-shrink:0;
+}
+
+.info-content h3{
+  color:#fff;
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.info-content p{
+  color:#bbb;
+  margin:0;
+  font-size:14px;
+}
+
+/* Right Form Card */
+.contact-form-card{
+  background: linear-gradient(145deg,#0b0b0b,#000);
+  border-radius:30px;
+  padding:60px;
+  box-shadow:0 40px 100px rgba(255,0,0,.3);
+}
+
+.contact-form-card h2{
+  color:#fff;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.contact-form-card p{
+  color:#aaa;
+}
+
+/* Inputs */
+.contact-form-card .form-control{
+  background:#050505;
+  border:1px solid rgba(255,255,255,.08);
+  color:#fff;
+  padding:14px 18px;
+  border-radius:14px;
+}
+
+.contact-form-card .form-control:focus{
+  border-color:#ff2b2b;
+  box-shadow:0 0 0 .2rem rgba(255,43,43,.25);
+  background:#050505;
+  color:#fff;
+}
+
+/* Button */
+.btn-submit{
+  background:linear-gradient(135deg,#ff2b2b,#9b0000);
+  border:none;
+  padding:15px 40px;
+  border-radius:40px;
+  font-weight:700;
+  color:#000;
+  transition:.3s;
+}
+
+.btn-submit:hover{
+  transform:translateY(-2px);
+  box-shadow:0 20px 50px rgba(255,0,0,.5);
+}
+
+/* Remove default contact bg */
+.contact.section{
+  background:transparent;
+}
+</style>
+
+
+<body class="contact-page">
+
+  <header id="header" class="header fixed-top">
+    
+
+    <div class="branding d-flex align-items-center" style="background-color: #121212;">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="img/1.png" alt="Logo">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul >
+              <li><a href="index.html"  style="font-size: 17px;">Home</a></li>
+              <li><a href="about.html"  style="font-size: 17px;">About</a></li>
+              <li><a href="services.html" style="font-size: 17px;">Services</a></li>
+            <li><a href="privacy.html" style="font-size: 17px;">Privacy Policy</a></li>
+              <li><a href="contact.html" class="active" style="font-size: 17px;">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="main">
+
+<!-- ===== CONTACT HERO ===== -->
+<section class="contact-hero">
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-9">
+        <span class="hero-badge">Contact Us</span>
+        <h1>
+          Let’s <span>Build Something</span><br>
+          Powerful Together
+        </h1>
+        <p>
+          Have an idea, project or question?  
+          Reach out to us and our team will respond within 24 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===== CONTACT HERO ===== */
+.contact-hero{
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at top, rgba(255,0,0,.35), transparent 60%),
+    linear-gradient(180deg,#0b0b0b,#000);
+  position:relative;
+  overflow:hidden;
+}
+
+.contact-hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at bottom, rgba(255,0,0,.15), transparent 60%);
+  pointer-events:none;
+}
+
+.contact-hero h1{
+  color:#fff;
+  font-size:64px;
+  font-weight:800;
+  line-height:1.1;
+}
+
+.contact-hero h1 span{
+  color:#ff2b2b;
+}
+
+.contact-hero p{
+  color:#ddd;
+  max-width:720px;
+  margin:20px auto 0;
+  font-size:18px;
+}
+
+.hero-badge{
+  display:inline-block;
+  margin-bottom:18px;
+  padding:8px 20px;
+  border-radius:30px;
+  background:rgba(255,43,43,.15);
+  color:#ff2b2b;
+  font-weight:600;
+  letter-spacing:.5px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .contact-hero h1{
+    font-size:42px;
+  }
+}
+
+</style>
+
+    <!-- Contact Section -->
+<section id="contact" class="contact section premium-contact">
+
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <div class="contact-info-wrapper">
+              <div class="contact-info-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="info-icon" style=" background-color: rgb(218, 164, 164);">
+                  <i class="bi bi-geo-alt" style="color: red;"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Our Address</h3>
+                  <p>1842 Maple Avenue, Portland, Oregon 97204</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="info-icon" style=" background-color: rgb(218, 164, 164);">
+                  <i class="bi bi-envelope" style="color: red;"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Email Address</h3>
+                  <p>info@example.com</p>
+                  <p>contact@example.com</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="info-icon" style=" background-color: rgb(218, 164, 164);">
+                  <i class="bi bi-headset" style="color: red;"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Hours of Operation</h3>
+                  <p>Sunday-Fri: 9 AM - 6 PM</p>
+                  <p>Saturday: 9 AM - 4 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form-card" data-aos="fade-up" data-aos-delay="200">
+              <h2>Send us a Message</h2>
+              <p class="mb-4">Have questions or want to learn more? Reach out to us and our team will get back to you
+                shortly.</p>
+
+              <form action="forms/contact.php" method="post" class="php-email-form">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required="">
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                      required="">
+                  </div>
+
+                  <div class="col-12">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                      required="">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" id="message" placeholder="Your Message" rows="6"
+                      required=""></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+<footer class="main-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- LEFT SIDE (LOGO + COMPANY + SOCIAL) -->
+      <div class="footer-col">
+
+        <!-- LOGO -->
+        <img src="img/footer.png" class="footer-logo" alt="logo">
+
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+
+        <h4 class="mt">Follow Us</h4>
+        <div class="socials">
+          <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="wa"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Other Links -->
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Categories</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Get a design -->
+      <div class="footer-col">
+        <h4>Get a design</h4>
+        <ul>
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Flyer Design</a></li>
+          <li><a href="#">Custom Animated Logo</a></li>
+          <li><a href="#">T-shirt Design</a></li>
+          <li><a href="#">Letterhead Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p><strong>Call:</strong> +1 (832) 226-9775</p>
+        <p>
+          <strong>Mail Address</strong><br>
+          11611 W Airport<br>
+          blvd 77477
+        </p>
+        <p>
+          <strong>Main Address</strong><br>
+          11611 W Airport<br>
+          blvd 77477
+        </p>
+      </div>
+
+    </div>
+
+    <!-- bottom -->
+    <div class="footer-bottom">
+     Powered by Logo-Space © 2024. All Rights Reserved.
+    </div>
+
+  </div>
+</footer>
+
+<style>
+/* ========= SAME OLD CSS (UNCHANGED) ========= */
+
+.main-footer{
+  background:#000;
+  color:#fff;
+  padding:90px 0 40px;
+  font-family:Arial, sans-serif;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:70px;
+}
+
+.footer-logo{
+  width:160px;
+  margin-bottom:25px;
+}
+
+.main-footer h4{
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:18px;
+  color:#fff;
+  text-align:left;
+}
+
+.main-footer a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  opacity:.85;
+}
+
+.main-footer a:hover{
+  opacity:1;
+}
+
+.main-footer ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.main-footer ul li{
+  margin-bottom:10px;
+}
+
+.main-footer p{
+  font-size:14px;
+  line-height:1.7;
+  color:#fff;
+  opacity:.9;
+}
+
+.main-footer strong{
+  font-weight:700;
+  color:#fff;
+}
+
+/* ========= UPDATED SOCIAL COLORS ONLY ========= */
+
+.socials{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+
+.socials a{
+  width:38px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+  font-size:15px;
+  transition:.3s;
+}
+
+/* brand colors */
+.socials .fb{ background:#1877F2; }
+.socials .tw{ background:#1DA1F2; }
+.socials .wa{ background:#25D366; }
+
+.socials .ig{
+  background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+}
+
+/* hover effect */
+.socials a:hover{
+  transform:translateY(-3px) scale(1.08);
+}
+
+/* ========= REST SAME ========= */
+
+.mt{
+  margin-top:30px;
+}
+
+.footer-bottom{
+  border-top:1px solid #222;
+  margin-top:60px;
+  padding-top:20px;
+  font-size:13px;
+  color:#fff;
+  opacity:.7;
+  text-align:center;
+}
+
+/* responsive */
+@media(max-width:992px){
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+}
+
+@media(max-width:576px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .footer-col{
+    text-align:center;
+  }
+
+  .footer-logo{
+    margin:0 auto 20px;
+  }
+
+  .socials{
+    justify-content:center;
+  }
+
+  .main-footer h4{
+    text-align:center;
+  }
+}
+</style>
+
+  <!-- Scroll Top -->
+  <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

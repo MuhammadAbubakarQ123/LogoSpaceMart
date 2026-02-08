@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – Digital Services Agency</title>
+
+  <link href="img/icon.png" rel="icon">
+  <link href="img/icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+ 
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="css/main.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    
+    /* HERO */
+    .about-hero {
+      margin-top: 120px;
+      padding: 130px 0 120px;
+      background: linear-gradient(135deg, #1a1a1a, #111);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(255,42,42,0.2), transparent 60%);
+      top: -120px;
+      right: -120px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(255,42,42,0.15);
+      color: #ff2a2a;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .about-hero h1 {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .about-hero h1 span {
+      color: #ff2a2a;
+    }
+
+    .about-hero p {
+      font-size: 18px;
+      max-width: 780px;
+      margin: 20px auto 0;
+      opacity: 0.85;
+    }
+
+    .hero-btn {
+      margin-top: 35px;
+      padding: 14px 38px;
+      background: #ff2a2a;
+      color: #fff;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .hero-btn:hover {
+      background: #e82020;
+      transform: translateY(-2px);
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 100px 0;
+    }
+
+    .about-section h2 {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .about-section .lead {
+      font-size: 17px;
+      opacity: 0.85;
+    }
+
+    .mission-box {
+      margin-top: 30px;
+      padding: 25px;
+      border-left: 4px solid #ff2a2a;
+      background: #1a1a1a;
+      border-radius: 12px;
+    }
+
+    /* STATS */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 45px;
+    }
+
+    .stat-item {
+      background: #111;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 800;
+      color: #ff2a2a;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      opacity: 0.7;
+      color: #fff;
+    }
+
+    /* VALUES */
+    .values {
+      padding: 100px 0;
+      background: #111;
+    }
+
+    .values h2,
+    .values p {
+      color: #fff;
+    }
+
+    .value-box {
+      background: #1a1a1a;
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      transition: 0.3s;
+    }
+
+    .value-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .value-box i {
+      font-size: 36px;
+      color: #ff2a2a;
+      margin-bottom: 15px;
+    }
+
+    /* IMAGE */
+    .about-image img {
+      border-radius: 22px;
+      box-shadow: 0 35px 90px rgba(0,0,0,0.35);
+    }
+  </style>
+</head>
+
+<body class="about-page">
+
+  <!-- ================= HEADER ================= -->
+  <header id="header" class="header fixed-top">
+    
+
+    <div class="branding d-flex align-items-center" style="background-color: #121212;">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="img/1.png" alt="Logo">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul >
+              <li><a href="index.html"  style="font-size: 17px;">Home</a></li>
+              <li><a href="about.html" class="active" style="font-size: 17px;">About</a></li>
+              <li><a href="services.html" style="font-size: 17px;">Services</a></li>
+            <li><a href="privacy.html" style="font-size: 17px;">Privacy Policy</a></li>
+              <li><a href="contact.html" style="font-size: 17px;">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="about-hero">
+    <div class="container">
+      <span class="hero-badge">Who We Are</span>
+      <h1 style="color: white;">We Create <span>Digital Experiences</span><br>That Build Brands</h1>
+      <p style="color: wheat;">
+        A premium digital services agency focused on design, development and branding.
+        We help businesses grow with bold visuals and powerful technology.
+      </p>
+      <a href="contact.html" class="hero-btn">Start Your Project</a>
+    </div>
+  </section>
+
+
+
+  <!-- ================= ABOUT STORY / CEO ================= -->
+<section class="about-section about-story-section" style="background:#111;">
+  <div class="container">
+
+    <!-- IMAGE 1 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <img src="img/astro.jpeg"
+     class="img-fluid rounded-4 shadow-lg about-small-img"
+     alt="">
+
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2>Who We Are</h2>
+        <p class="lead" style="color:wheat;">
+          We are a creative design agency dedicated to helping brands stand out in a crowded digital world.
+          With a strong focus on logo design, branding, and visual identity, we turn ideas into powerful visuals
+          that connect with the right audience.
+        </p>
+
+        <p style="color:#ddd;">
+          Our team believes that a logo is more than just a design — it’s the face of your brand.
+          That’s why we take time to understand your business, your goals, and your vision before
+          crafting designs that truly represent who you are.
+        </p>
+
+        <p style="color:#ddd;">
+          With years of experience in the design industry, we have worked with startups, entrepreneurs,
+          and growing businesses across different industries. Our approach is simple: creativity,
+          strategy, and quality — all delivered with professionalism and transparency.
+        </p>
+      </div>
+    </div>
+
+    <!-- IMAGE 2 -->
+    <div class="row align-items-center mt-5 flex-lg-row-reverse">
+      <div class="col-lg-6" data-aos="fade-left">
+        <img src="img/ceo.jpeg" class="img-fluid rounded-4 shadow-lg" alt="">
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-right">
+        <span class="hero-badge">Leadership</span>
+        <h2>CEO’s Vision & Mission</h2>
+
+        <h6 style="color:#ff2a2a; font-weight:700; margin-top:20px;">
+          Mr. Kristopher – Chief Executive Officer
+        </h6>
+
+        <div class="mission-box mt-4">
+          <h6 style="color:white;"><strong>Vision</strong></h6>
+          <p style="color:wheat;">
+            Mr. Kristopher envisions building a globally recognized creative agency that empowers
+            businesses through impactful branding and design. His vision is to help brands establish
+            a strong identity that stands the test of time while remaining adaptable in an
+            ever-evolving digital landscape.
+          </p>
+        </div>
+
+        <div class="mission-box mt-3">
+          <h6 style="color:white;"><strong>Mission</strong></h6>
+          <p style="color:wheat;">
+            The mission of Mr. Kristopher is to lead with creativity, integrity, and innovation.
+            He is committed to delivering high-quality, custom design solutions that help businesses
+            grow, connect with their audience, and achieve long-term success.
+            Through a client-first approach and a passion for excellence, he aims to create value
+            that goes beyond design.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 style="color: black;">Our Perspective</h2>
+          <p class="lead">
+            We are not just designers or developers — we are brand builders.
+            Our mission is to transform ideas into premium digital products
+            that leave a lasting impression.
+          </p>
+
+          <div class="mission-box">
+            <!-- <h6 style="color: white;"><strong>Our Mission</strong></h6> -->
+            <p style="color: wheat;">
+              To empower businesses with modern design, clean code and
+              result-driven digital solutions that stand out in competitive markets.
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">250+</div>
+              <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">120+</div>
+              <div class="stat-label">Satisfied Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">6+</div>
+              <div class="stat-label">Years of Experience</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 about-image" data-aos="fade-left">
+          <img src="img/2d3d.jpeg" class="img-fluid" alt="">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ================= SERVICES OVERVIEW ================= -->
+<section class="section-padding" style="background:#111;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 style="color: red;">Our Service Expertise</h2>
+      <p style="color: wheat;">Complete digital solutions under one roof</p>
+    </div>
+
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <div class="service-pill">Graphic Design</div>
+      <div class="service-pill">Flyer Designing</div>
+      <div class="service-pill">Book cover</div>
+      <div class="service-pill">Letter head Designing</div>
+      <div class="service-pill">Banner Designing</div>
+      <div class="service-pill">T-Shirt Designing</div>
+      <div class="service-pill">Business cards</div>
+      <div class="service-pill">Customized Brochure</div>
+      <div class="service-pill">Custom website</div>
+      <div class="service-pill">E-Commerce website</div>
+      <div class="service-pill">App Development</div>
+      <div class="service-pill">E-Book Writing</div>
+    <a href="services.html" class="service-pill" style="
+  background:#ff2a2a;
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  padding:12px 26px;
+  border-radius:30px;
+  transition:0.3s;
+">
+  View All 23+ Services
+</a>
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+  /* NEW SECTIONS */
+    .section-padding { padding: 100px 0; }
+
+    .service-pill {
+      background: #1a1a1a;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      border: 1px solid rgba(255,42,42,0.2);
+      color: #fff;
+    }
+
+    .timeline-box {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 18px;
+      border-left: 4px solid #ff2a2a;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #ff2a2a, #c41414);
+      padding: 70px;
+      border-radius: 30px;
+      text-align: center;
+    }
+
+    .cta-box h2 { font-weight: 800; }
+</style>
+
+
+
+  <!-- ================= VALUES ================= -->
+  <section class="values">
+    <div class="container">
+      <div class="row text-center mb-5">
+        <h2>Why Clients Choose Us</h2>
+        <p>Our core principles that define our work</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="value-box">
+            <i class="bi bi-brush"></i>
+            <h5 style="color: wheat;">Creative Excellence</h5>
+            <p>Visually powerful and memorable designs.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="value-box">
+            <i class="bi bi-code-slash"></i>
+            <h5 style="color: wheat;">Clean Code</h5>
+            <p>Fast, scalable and secure development.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="value-box">
+            <i class="bi bi-lightning-charge"></i>
+            <h5 style="color: wheat;">Fast Execution</h5>
+            <p>On-time delivery without quality loss.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="value-box">
+            <i class="bi bi-stars"></i>
+            <h5 style="color: wheat;">Premium Results</h5>
+            <p>High-end outcomes that convert.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="main-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- LEFT SIDE (LOGO + COMPANY + SOCIAL) -->
+      <div class="footer-col">
+
+        <!-- LOGO -->
+        <img src="img/footer.png" class="footer-logo" alt="logo">
+
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+
+        <h4 class="mt">Follow Us</h4>
+        <div class="socials">
+          <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="wa"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Other Links -->
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Categories</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <!-- Get a design -->
+      <div class="footer-col">
+        <h4>Get a design</h4>
+        <ul>
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Flyer Design</a></li>
+          <li><a href="#">Custom Animated Logo</a></li>
+          <li><a href="#">T-shirt Design</a></li>
+          <li><a href="#">Letterhead Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p><strong>Call:</strong> +1 (832) 226-9775</p>
+        <p>
+          <strong>Mail Address</strong><br>
+          11611 W Airport<br>
+          blvd 77477
+        </p>
+        <p>
+          <strong>Main Address</strong><br>
+          11611 W Airport<br>
+          blvd 77477
+        </p>
+      </div>
+
+    </div>
+
+    <!-- bottom -->
+    <div class="footer-bottom">
+     Powered by Logo-Space © 2024. All Rights Reserved.
+    </div>
+
+  </div>
+</footer>
+
+<style>
+/* ========= SAME OLD CSS (UNCHANGED) ========= */
+
+.main-footer{
+  background:#000;
+  color:#fff;
+  padding:90px 0 40px;
+  font-family:Arial, sans-serif;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:70px;
+}
+
+.footer-logo{
+  width:160px;
+  margin-bottom:25px;
+}
+
+.main-footer h4{
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:18px;
+  color:#fff;
+  text-align:left;
+}
+
+.main-footer a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  opacity:.85;
+}
+
+.main-footer a:hover{
+  opacity:1;
+}
+
+.main-footer ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.main-footer ul li{
+  margin-bottom:10px;
+}
+
+.main-footer p{
+  font-size:14px;
+  line-height:1.7;
+  color:#fff;
+  opacity:.9;
+}
+
+.main-footer strong{
+  font-weight:700;
+  color:#fff;
+}
+
+/* ========= UPDATED SOCIAL COLORS ONLY ========= */
+
+.socials{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+
+.socials a{
+  width:38px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+  font-size:15px;
+  transition:.3s;
+}
+
+/* brand colors */
+.socials .fb{ background:#1877F2; }
+.socials .tw{ background:#1DA1F2; }
+.socials .wa{ background:#25D366; }
+
+.socials .ig{
+  background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+}
+
+/* hover effect */
+.socials a:hover{
+  transform:translateY(-3px) scale(1.08);
+}
+
+/* ========= REST SAME ========= */
+
+.mt{
+  margin-top:30px;
+}
+
+.footer-bottom{
+  border-top:1px solid #222;
+  margin-top:60px;
+  padding-top:20px;
+  font-size:13px;
+  color:#fff;
+  opacity:.7;
+  text-align:center;
+}
+
+/* responsive */
+@media(max-width:992px){
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+}
+
+@media(max-width:576px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .footer-col{
+    text-align:center;
+  }
+
+  .footer-logo{
+    margin:0 auto 20px;
+  }
+
+  .socials{
+    justify-content:center;
+  }
+
+  .main-footer h4{
+    text-align:center;
+  }
+}
+</style>
+
+  <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" ><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- JS -->
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+
+</body>
+</html>
